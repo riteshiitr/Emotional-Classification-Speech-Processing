@@ -47,21 +47,21 @@ Each audio file is named using the following format:
 
 2.	Feature Extraction:
    
-   o	Extracted MFCCs (Mel Frequency Cepstral Coefficients) using librosa.feature.mfcc
+     o	Extracted MFCCs (Mel Frequency Cepstral Coefficients) using librosa.feature.mfcc
 
-   o	Mean MFCCs across time frames are used as features for model input.
+     o	Mean MFCCs across time frames are used as features for model input.
 
 3.	Data Labeling:
    
-   o	Emotion class parsed from file names using string operations.
+     o	Emotion class parsed from file names using string operations.
 
-   o	Mapped emotion codes to human-readable labels.
+     o	Mapped emotion codes to human-readable labels.
 
 4.	Data Preparation:
    
-   o	Features and labels are stored in X and y.
+     o	Features and labels are stored in X and y.
 
-   o	Splitting into training and test sets using train_test_split.
+     o	Splitting into training and test sets using train_test_split.
 
 
 ## Model Pipeline:
