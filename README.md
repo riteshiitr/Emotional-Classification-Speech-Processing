@@ -31,13 +31,13 @@ Each audio file is named using the following format:
 
 03-01-01-01-01-01-03.wav, where:
 
-   •	Modality: 03 = Audio-only
-   
-   •	Vocal Channel: 01 = Speech
-   
-   •	Emotion: Encoded as integers (01-08)
-   
-   •	Intensity, Statement, Repetition, Actor: Used to identify and structure the data
+      •	Modality: 03 = Audio-only
+      
+      •	Vocal Channel: 01 = Speech
+      
+      •	Emotion: Encoded as integers (01-08)
+      
+      •	Intensity, Statement, Repetition, Actor: Used to identify and structure the data
 
 ### Steps:
 
@@ -71,33 +71,33 @@ Multi-Layer Perceptron (MLP) from sklearn.neural_network:
 
 •	Architecture:
 
-   	Hidden Layers: 2
+      	Hidden Layers: 2
+      
+      	Activation: relu
    
-   	Activation: relu
-
-   	Solver: adam
-   
+      	Solver: adam
+      
 
 •	Fitting:
-
-   	Model trained on preprocessed MFCC features.
    
-   	Labels are encoded using LabelEncoder.
+      	Model trained on preprocessed MFCC features.
+      
+      	Labels are encoded using LabelEncoder.
 
 
 ## Workflow:
 
-   	Read audio file paths.
-   
-   	Extract MFCC features.
-   
-   	Create dataset with extracted features.
-   
-   	Preprocess (scale, encode) the dataset.
-   
-   	Train and validate MLP model.
-   
-   	Evaluate accuracy on test set.
+      	Read audio file paths.
+      
+      	Extract MFCC features.
+      
+      	Create dataset with extracted features.
+      
+      	Preprocess (scale, encode) the dataset.
+      
+      	Train and validate MLP model.
+      
+      	Evaluate accuracy on test set.
 
 
 
