@@ -24,6 +24,7 @@ The emotions considered include:
 The primary objective is to build an accurate classifier capable of identifying emotional content from speech using MFCC features.
 
 ## Pre-Processing Methodology:
+
 Dataset Information (RAVDESS Audio Files)
 
 Each audio file is named using the following format:
@@ -46,16 +47,20 @@ o	Used librosa.load to load WAV files while preserving their original sample rat
 o	Extracted MFCCs (Mel Frequency Cepstral Coefficients) using librosa.feature.mfcc
 
 o	Mean MFCCs across time frames are used as features for model input.
+
 3.	Data Labeling:
 o	Emotion class parsed from file names using string operations.
+
 o	Mapped emotion codes to human-readable labels.
 
 4.	Data Preparation:
 o	Features and labels are stored in X and y.
+
 o	Splitting into training and test sets using train_test_split.
 
 
 ## Model Pipeline:
+
 Classifier Used:
 Multi-Layer Perceptron (MLP) from sklearn.neural_network:
 
@@ -77,6 +82,7 @@ Multi-Layer Perceptron (MLP) from sklearn.neural_network:
 
 
 ## Workflow:
+
 	Read audio file paths.
 
 	Extract MFCC features.
@@ -94,5 +100,7 @@ Multi-Layer Perceptron (MLP) from sklearn.neural_network:
 ## Accuracy Metrics:
 
 ## Saved Model:
+
 	Trained model is saved as: best_emotion_model.pth (Pickled)
+
 	This can be used for deployment or inference on new audio data.
