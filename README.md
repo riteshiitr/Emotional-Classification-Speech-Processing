@@ -5,21 +5,21 @@ This project is a machine learning pipeline developed to classify emotions from 
 
 The emotions considered include:
 
-•	Neutral
-
-•	Calm
-
-•	Happy
-
-•	Sad
-
-•	Angry
-
-•	Fearful
-
-•	Disgust
-
-•	Surprised
+   •	Neutral
+   
+   •	Calm
+   
+   •	Happy
+   
+   •	Sad
+   
+   •	Angry
+   
+   •	Fearful
+   
+   •	Disgust
+   
+   •	Surprised
 
 The primary objective is to build an accurate classifier capable of identifying emotional content from speech using MFCC features.
 
@@ -31,13 +31,13 @@ Each audio file is named using the following format:
 
 03-01-01-01-01-01-03.wav, where:
 
-•	Modality: 03 = Audio-only
-
-•	Vocal Channel: 01 = Speech
-
-•	Emotion: Encoded as integers (01-08)
-
-•	Intensity, Statement, Repetition, Actor: Used to identify and structure the data
+   •	Modality: 03 = Audio-only
+   
+   •	Vocal Channel: 01 = Speech
+   
+   •	Emotion: Encoded as integers (01-08)
+   
+   •	Intensity, Statement, Repetition, Actor: Used to identify and structure the data
 
 ### Steps:
 
@@ -71,38 +71,85 @@ Multi-Layer Perceptron (MLP) from sklearn.neural_network:
 
 •	Architecture:
 
-	Hidden Layers: 1
+   	Hidden Layers: 1
+   
+   	Activation: relu
 
-	Activation: relu
-
-	Solver: adam
-
-	Maximum Iterations: 500
+   	Solver: adam
+   
+   	Maximum Iterations: 500
 
 •	Fitting:
 
-	Model trained on preprocessed MFCC features.
-
-	Labels are encoded using LabelEncoder.
+   	Model trained on preprocessed MFCC features.
+   
+   	Labels are encoded using LabelEncoder.
 
 
 ## Workflow:
 
-	Read audio file paths.
-
-	Extract MFCC features.
-
-	Create dataset with extracted features.
-
-	Preprocess (scale, encode) the dataset.
-
-	Train and validate MLP model.
-
-	Evaluate accuracy on test set.
+   	Read audio file paths.
+   
+   	Extract MFCC features.
+   
+   	Create dataset with extracted features.
+   
+   	Preprocess (scale, encode) the dataset.
+   
+   	Train and validate MLP model.
+   
+   	Evaluate accuracy on test set.
 
 
 
 ## Accuracy Metrics:
+
+Before Reducing Features:
+   
+   •	Overall Accuracy: 77%
+   
+   •	Overall F1 Score:73.4%
+   
+   •	Accuracy of classes:
+   
+      1.	Neutral:92%
+         
+      3.	Calm: 76%
+         
+      5.	Happy: 62%
+         
+      7.	Sad: 75%
+         
+      9.	Angry: 76%
+          
+      11.	Fearful:82%
+          
+      13.	Disgust:70%
+          
+      15.	Surprised:76%
+
+    
+After Reducing Features:
+
+   •	Overall Accuracy: 82%
+   
+   •	Overall F1 Score:81.7%
+   
+   •	Accuracy of classes:
+   
+      1.	Calm: 82%
+      
+      2.	Happy: 85%
+      
+      3.	Sad: 78%
+      
+      4.	Angry: 82%
+      
+      5.	Fearful:85%
+      
+      6.	Disgust:81%
+      
+
 
 ## Saved Model:
 
