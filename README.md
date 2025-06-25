@@ -71,13 +71,12 @@ Multi-Layer Perceptron (MLP) from sklearn.neural_network:
 
 •	Architecture:
 
-   	Hidden Layers: 1
+   	Hidden Layers: 2
    
    	Activation: relu
 
    	Solver: adam
    
-   	Maximum Iterations: 500
 
 •	Fitting:
 
@@ -115,19 +114,19 @@ Before Reducing Features:
    
       1.	Neutral:92%
          
-      3.	Calm: 76%
+      2.	Calm: 76%
          
-      5.	Happy: 62%
+      3.	Happy: 62%
          
-      7.	Sad: 75%
+      4.	Sad: 75%
          
-      9.	Angry: 76%
+      5.	Angry: 76%
           
-      11.	Fearful:82%
+      6.	Fearful:82%
           
-      13.	Disgust:70%
+      7.	Disgust:70%
           
-      15.	Surprised:76%
+      8.	Surprised:76%
 
     
 After Reducing Features:
